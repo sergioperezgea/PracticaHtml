@@ -113,4 +113,3 @@ class User implements IToJson
         ));
     }
 }
-?>
