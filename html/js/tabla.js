@@ -25,7 +25,7 @@ window.onload = () => {
         if (input.value.length >= 3) {
             const items = usuarios.filter(item => {
                 return item.nombre.toLocaleLowerCase().includes(input.value.toLocaleLowerCase()) ||
-                item.apellidos.toLocaleLowerCase().includes(input.value.toLocaleLowerCase());
+                    item.apellidos.toLocaleLowerCase().includes(input.value.toLocaleLowerCase());
             });
 
             rellenarTabla(items);
@@ -60,7 +60,7 @@ const crearFila = (usuario) => {
     const id = usuario.email;
     const fila = document.createElement('tr');
     fila.setAttribute('id', id);
-    fila.appendChild(createButton('X', () => document.getElementById(id).remove()));
+    fila.appendChild(crearBoton('X', () => document.getElementById(id).remove()));
     fila.appendChild(crearColumna(usuario.nombre));
     fila.appendChild(crearColumna(usuario.apellidos));
     fila.appendChild(crearColumna(usuario.telefono));
@@ -70,13 +70,12 @@ const crearFila = (usuario) => {
     return fila;
 }
 
-//Constante para crear el boton
-const createButton = (texto, onClick) => {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.id = 'Borrar';
-    button.title = 'Borrar usuario';
-    button.onclick = onClick;
-    button.innerText = texto;
-    return button;
+//Constante para crear el td "boton"
+const crearBoton = (texto, onClick) => {
+    const boton = document.createElement('td');
+    boton.id = 'Borrar';
+    boton.title = 'Borrar usuario';
+    boton.onclick = onClick;
+    boton.innerText = texto;
+    return boton;
 }
