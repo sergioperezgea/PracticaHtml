@@ -1,0 +1,106 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+pre,
+code,
+address,
+variable,
+form,
+fieldset,
+blockquote {
+    padding: 0;
+    /*relleno a 0*/
+    margin: 0;
+    /*margen a 0 */
+    font-size: 100%;
+    font-weight: normal;
+}
+
+body {
+    background-image: url(image/background.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hoja3 {
+    color: #B99F65;
+}
+
+header {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 300%;
+    color: #B99F65;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-bottom: #B99F65 solid 0.5vh;
+    padding-right: auto;
+    padding-left: auto;
+    padding-bottom: 1%;
+    font-size: 200%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 2em;
+    background: #00000080;
+    backdrop-filter: blur(4px);
+}
+
+th {
+    border: #B99F65 solid 0.5vh;
+}
+
+td {
+    padding-left: 0.5%;
+    border: #B99F65 solid 0.5vh;
+}
+
+#Borrar {
+    text-align: center;
+}
+
+#Borrar:hover {
+    color: #B99F65;
+    background-color: black;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 2%;
+    text-align: center;
+    font-size: 170%;
+}
+
+#buscador {
+    margin-bottom: 2%;
+}
+
+#filtro {
+    margin: auto;
+    display: inherit;
+    border: 0.5vh solid #B99F65;
+    background-color: #00000050;
+    color: #B99F65;
+    padding: 10px;
+    backdrop-filter: blur(4px);
+}

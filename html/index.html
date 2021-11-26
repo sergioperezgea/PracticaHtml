@@ -2,80 +2,82 @@
 <html lang="es">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Zelda</title>
-	<link rel="icon" href="image/favicon.ico" type="image/ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Zelda</title>
+    <link rel="icon" href="image/favicon.ico" type="image/ico" />
+    <link href="css/navStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/indexStyle.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-	<header>
-		<h1 id="Titulo">Zelda Breath of the Wild</h1>
-	</header>
-	<nav>
-        <a href="index.html">Index</a> |
-        <a href="hoja2.html">Hoja2</a> |
-        <a href="hoja3.html">Hoja3</a> |
-        <a href="hoja4.html">Hoja4</a> |
-        <a href="hoja5.html">Hoja5</a>
+    <header>
+        <h1 id="Titulo">The Legend of Zelda Breath of the Wild</h1>
+    </header>
+    <nav>
+        <a href="index.html" class="index">Registro</a>
+        <a href="hoja2.html">Historia</a>
+        <a href="hoja3.html">Usuarios</a>
+        <a href="hoja4.html">Video</a>
+        <a href="hoja5.html">Personajes</a>
     </nav>
-	<main>
-		<h2>Inicio</h2>
-		<form action="ws/crearUsuario.php" method="POST">
-			<fieldset>
-				<legend>Datos personales</legend>
-				<p>
-					<label>
+    <main>
+        <h2>Inicio</h2>
+        <form action="ws/crearUsuario.php" method="POST">
+            <fieldset id="personales">
+                <legend>Datos personales</legend>
+                <p>
+                    <label>
 						Nombre:
 						<input type="text" name="nombre" maxlength="50" placeholder="Mario" />
 					</label>
-					<br>
-					<br>
-					<label>
+                    <br>
+                    <br>
+                    <label>
 						Apellidos:
 						<input type="text" name="apellidos" maxlength="50" placeholder="Hernandez Gimenez" />
 					</label>
-					<br>
-					<br>
-					<label>
+                    <br>
+                    <br>
+                    <label>
 						contrase&ntilde;a:
 						<input type="password" name="clave" maxlength="50" />
 					</label>
-					<br>
-					<br>
-					<label>
+                    <br>
+                    <br>
+                    <label>
 						Telefono
 						<input type="tel" name="telefono" placeholder="666433423" />
 					</label>
-					<br>
-					<br>
-					<label>
+                    <br>
+                    <br>
+                    <label>
 						Email
-						<input type="email" name="correo" placeholder="prueba@gmail.com" />
+						<input id="email" type="email" name="correo" placeholder="prueba@gmail.com" />
 					</label>
-				</p>
-			</fieldset>
-			<fieldset>
-				<legend>Otros datos</legend>
-				<p>
-					Sexo:
-					<label>
+                </p>
+            </fieldset>
+            <fieldset id="otros">
+                <legend>Otros datos</legend>
+                <p>
+                    Sexo:
+                    <label>
 						<input type="radio" name="sexo" value="hombre" checked /> Hombre
 					</label>
-					<label>
+                    <label>
 						<input type="radio" name="sexo" value="mujer" /> Mujer
 					</label>
-				</p>
-				<br>
-				<textarea name="comentario" placeholder="comentario" rows="10" cols="88"></textarea>
-			</fieldset>
-			<br>
-			<input type="submit" name="enviar">
-			<input type="reset" name="limpiar" value="Limpiar">
-		</form>
-	</main>
-	<footer id="footer">
-		<p>Copyright &copy; Sergio P&eacute;rez Gea</p>
-	</footer>
+                </p>
+                <br>
+                <textarea name="comentario" placeholder="comentario" rows="10" cols="88"></textarea>
+            </fieldset>
+            <br>
+            <input type="submit" name="enviar" id="enviar">
+            <input type="reset" name="limpiar" value="Limpiar" id="borrar">
+        </form>
+    </main>
+    <footer id="footer">
+        <p>Copyright &copy; Sergio P&eacute;rez Gea</p>
+    </footer>
 </body>
 
 </html>
