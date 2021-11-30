@@ -1,15 +1,9 @@
 <?php
-
-use GrahamCampbell\ResultType\Success;
-
 require_once "models\User.php";
 require_once "crearUsuario2.php";
 
-
 $colegio = new crearUsuario2();
 $colegio->crearUsuario();
-
-
 
 $nombre = $_POST['nombre'];
 $apellidos = $_POST['apellidos'];

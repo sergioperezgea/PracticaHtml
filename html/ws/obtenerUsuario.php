@@ -4,12 +4,11 @@ require "getUsuario.php";
 $obtener = new getUsuario();
 
 if ($id = $_GET) {
-
     $usuario = $obtener->obtenerUsuario($id);
 
     if ($obtener = $usuario) {
         $datos = json_decode($usuario->toJson());
-        
+
         echo json_encode([
             'success' => true,
             'message' => "Usuario encontrado con exito",
@@ -23,13 +22,11 @@ if ($id = $_GET) {
         ]);
     }
 } else {
-    $usuarios = $obtener->obtenerUsuario1("");
-
+    $usuarios = $obtener->obtenerTodosUsuarios("");
     $datosUsuarios = [];
 
     foreach ($usuarios as $usuario) {
         $datosUsuarios[] =  json_decode($usuario->toJson());
-        
     }
     echo json_encode([
         'success' => true,

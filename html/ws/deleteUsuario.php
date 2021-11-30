@@ -28,7 +28,8 @@ class deleteUsuario extends Conexion
             $sexo = $datos[6];
             $fecha_nacimiento = $datos[7];
             $comentario = $datos[8];
-            $usuario = new User($nombre, $apellidos, $clave, $telefono, $correo, $sexo, $fecha_nacimiento ,$comentario);
+
+            $usuario = new User($nombre, $apellidos, $clave, $telefono, $correo, $sexo, $fecha_nacimiento, $comentario);
 
             return $usuario;
         }

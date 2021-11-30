@@ -10,17 +10,14 @@ class modificarUsuario extends Conexion
     }
     public function userModificado($datos)
     {
-
         $concatenacion = array();
         $parametros = array();
-
         $concatenacion[] = 'UPDATE ALUMNO SET id=:id';
 
         if (isset($_POST['nombre'])) {
             $concatenacion[] = ', nombre=:nombre';
             $parametros[':nombre'] = $_POST['nombre'];
         }
-
 
         if (isset($_POST['apellidos'])) {
             $concatenacion[] = ', apellidos=:apellidos';
@@ -58,12 +55,10 @@ class modificarUsuario extends Conexion
         }
 
         $concatenacion[] = 'WHERE id=:id';
-
         $parametros[':id'] = $_GET['id'];
         $sql = implode(' ', $concatenacion);
 
         $sentencia = $this->conexion_db->prepare($sql);
-
         $sentencia->execute($parametros);
     }
 }
