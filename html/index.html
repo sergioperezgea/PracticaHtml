@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="es">
 
 <head>
@@ -7,19 +9,17 @@
     <link rel="icon" href="image/favicon.ico" type="image/ico" />
     <link href="css/navStyle.css" rel="stylesheet" type="text/css" />
     <link href="css/indexStyle.css" rel="stylesheet" type="text/css" />
+    <script src="js/jav.js"></script>
 </head>
 
 <body>
     <header>
         <h1 id="Titulo">The Legend of Zelda Breath of the Wild</h1>
     </header>
-    <nav>
-        <a href="index.html" class="index">Registro</a>
-        <a href="hoja2.html">Historia</a>
-        <a href="hoja3.html">Usuarios</a>
-        <a href="hoja4.html">Video</a>
-        <a href="hoja5.html">Personajes</a>
-    </nav>
+
+    <div id="navegacion">
+    </div>
+
     <main>
         <h2>Inicio</h2>
         <form action="ws/crearUsuario.php" method="POST">
@@ -40,7 +40,7 @@
                     <br>
                     <label>
 						contrase&ntilde;a:
-						<input type="password" name="clave" maxlength="50" />
+						<input type="text" name="clave" maxlength="50" />
 					</label>
                     <br>
                     <br>
@@ -53,6 +53,10 @@
                     <label>
 						Email
 						<input id="email" type="email" name="correo" placeholder="prueba@gmail.com" />
+					</label>
+                    <label>
+						Nacimiento
+						<input id="fecha_nacimiento" type="text" name="fecha_nacimiento" placeholder="1978-08-03" />
 					</label>
                 </p>
             </fieldset>

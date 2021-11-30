@@ -1,4 +1,7 @@
 <?php
+
+use Illuminate\Support\Facades\Date;
+
 require("interfaces\IToJson.php");
 class User implements IToJson
 {
@@ -8,6 +11,7 @@ class User implements IToJson
     private $telefono;
     private $email;
     private $sexo;
+    private $fecha_nacimiento;
     private $comentario;
 
     public function __construct(
@@ -17,6 +21,7 @@ class User implements IToJson
         int $telefono,
         string $email,
         string $sexo,
+        string $fecha_nacimiento,
         string $comentario
     ) {
         $this->nombre = $nombre;
@@ -25,6 +30,7 @@ class User implements IToJson
         $this->telefono = $telefono;
         $this->email = $email;
         $this->sexo = $sexo;
+        $this->fecha_nacimiento = $fecha_nacimiento;
         $this->comentario = $comentario;
     }
 
@@ -88,6 +94,17 @@ class User implements IToJson
         $this->sexo = $sexo;
     }
 
+    public function getFechaNacimiento(): string
+    {
+        return $this->fecha_nacimiento;
+    }
+
+    public function setFechaNacimiento(String $fecha_nacimiento)
+    {
+        $this->fecha_nacimiento = $fecha_nacimiento;
+    }
+
+
     public function getComentario(): string
     {
         return $this->comentario;
@@ -104,10 +121,11 @@ class User implements IToJson
             array(
                 "nombre" => $this->getNombre(),
                 "apellidos" => $this->getApellidos(),
-                "clave" => $this->getClave(),
+                //"clave" => $this->getClave(),
                 "telefono" => $this->getTelefono(),
                 "correo" => $this->getCorreo(),
                 "sexo" => $this->getSexo(),
+                "fecha_nacimiento" => $this->getFechaNacimiento(),
                 "comentario" => $this->getComentario()
             )
         ));

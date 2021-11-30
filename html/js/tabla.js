@@ -1,12 +1,3 @@
-//Creación del input filtro
-const input = document.createElement("input");
-input.setAttribute('type', 'text');
-input.setAttribute('id', 'filtro');
-input.setAttribute('placeholder', 'Filtrar');
-
-const div = document.getElementById("buscador");
-div.appendChild(input);
-
 //array con los objetos usuarios
 window.onload = () => {
     const usuarios = [
@@ -19,6 +10,15 @@ window.onload = () => {
     ];
     //Llamada a la funcion de crear la tabla con los usuarios
     rellenarTabla(usuarios);
+
+    //Creación del input filtro
+    const input = document.createElement("input");
+    input.setAttribute('type', 'text');
+    input.setAttribute('id', 'filtro');
+    input.setAttribute('placeholder', 'Filtrar');
+
+    const div = document.getElementById("buscador");
+    div.appendChild(input);
 
     //constante con el que filtraremos los nombres de la tabla
     const filtrar = () => {
@@ -34,6 +34,8 @@ window.onload = () => {
         }
     }
     document.addEventListener('keyup', filtrar);
+    console.log(usuarios);
+
 };
 
 //Funcion para crear la tabla con los usuarios
@@ -46,14 +48,14 @@ function rellenarTabla(usuarios) {
         tbody.appendChild(crearFila(usuarios[i]));
         i++;
     }
-}
+};
 
 //Constante para crear columnas de la tabla
 const crearColumna = (texto) => {
     const columna = document.createElement('td');
     columna.textContent = texto;
     return columna;
-}
+};
 
 //Constante para crear las filas de la tabla, añadirles id y añadir que el boton x elimine la fila por id,(el id es el email)
 const crearFila = (usuario) => {
@@ -61,6 +63,7 @@ const crearFila = (usuario) => {
     const fila = document.createElement('tr');
     fila.setAttribute('id', id);
     fila.appendChild(crearBoton('X', () => document.getElementById(id).remove()));
+    fila.appendChild(crearBoton2('E', () => document.getElementById(id)));
     fila.appendChild(crearColumna(usuario.nombre));
     fila.appendChild(crearColumna(usuario.apellidos));
     fila.appendChild(crearColumna(usuario.telefono));
@@ -68,14 +71,23 @@ const crearFila = (usuario) => {
     fila.appendChild(crearColumna(usuario.sexo));
     fila.appendChild(crearColumna(usuario.comentario));
     return fila;
-}
+};
 
 //Constante para crear el td "boton"
 const crearBoton = (texto, onClick) => {
-    const boton = document.createElement('td');
+    const boton = document.createElement('button');
     boton.id = 'Borrar';
     boton.title = 'Borrar usuario';
     boton.onclick = onClick;
     boton.innerText = texto;
     return boton;
-}
+};
+
+const crearBoton2 = (texto, onClick) => {
+    const boton2 = document.createElement('button');
+    boton2.id = 'editar';
+    boton2.title = 'Editar usuario';
+    boton2.onclick = onClick;
+    boton2.innerText = texto;
+    return boton2;
+};
