@@ -31,7 +31,6 @@ body {
     background-repeat: repeat;
     font-family: 'Courier New', Courier, monospace;
     color: white;
-    height: 100vh;
     background-attachment: fixed;
 }
 
@@ -40,98 +39,24 @@ body {
 }
 
 header {
-    text-align: center;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    font-size: 300%;
     color: #B99F65;
 }
 
 h2 {
-    text-align: center;
-    margin-top: 1%;
-    margin-bottom: 2%;
     border-bottom: #B99F65 solid 0.5vh;
-    padding-right: auto;
-    padding-left: auto;
-    padding-bottom: 1%;
-    font-size: 200%;
-}
-
-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    text-align: center;
-}
-
-#personales {
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-
-#otros {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-#personales input {
-    margin-right: 40%;
-    margin-left: 40%;
-}
-
-input {
-    border: 0.5vh solid #B99F65;
-    background-color: #00000050;
-    color: #B99F65;
-    padding: 10px;
-    backdrop-filter: blur(4px);
-}
-
-textarea {
-    margin: auto;
-    display: inherit;
-    border: 0.5vh solid #B99F65;
-    background-color: #00000050;
-    color: #B99F65;
-    padding: 20px;
-    backdrop-filter: blur(4px);
 }
 
 legend {
-    margin-bottom: 1%;
     border: 0.5vh solid #B99F65;
     background-color: #00000050;
     color: #B99F65;
 }
 
 fieldset {
-    margin-bottom: 3%;
     background-color: #00000050;
     backdrop-filter: blur(4px);
 }
 
-#email {
-    margin-bottom: 2%;
-    margin-left: 2%;
-}
-
-#enviar {
-    grid-column: 1/1;
-    grid-row: 2/2;
-    margin-left: 40%;
-    margin-right: 40%;
-}
-
-#borrar {
-    grid-column: 2/2;
-    grid-row: 2/2;
-    margin-right: 40%;
-    margin-left: 40%;
-}
-
 footer {
-    margin-top: 2%;
-    text-align: center;
     font-size: 170%;
 }

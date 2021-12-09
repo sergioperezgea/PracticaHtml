@@ -35,8 +35,6 @@ body {
     background-repeat: repeat;
     font-family: 'Courier New', Courier, monospace;
     color: white;
-    height: 100vh;
-    text-align: center;
     background-attachment: fixed;
 }
 
@@ -55,35 +53,23 @@ body {
 }
 
 header {
-    text-align: center;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    font-size: 300%;
     color: #B99F65;
 }
 
 h2 {
-    margin-top: 1%;
-    padding-right: auto;
-    padding-left: auto;
-    padding-bottom: 1%;
-    font-size: 200%;
     border-bottom: #B99F65 solid 0.5vh;
 }
 
 h3 {
     font-size: 150%;
-    padding: 0.5% 0% 0.5% 0%;
 }
 
 .ul-principales {
-    margin-top: 1%;
-    margin-bottom: 1%;
+    border-bottom: #B99F65 solid 0.3vmax;
 }
 
 .ul-principales li {
     list-style-type: none;
-    display: inline;
 }
 
 .ul-principales a {
@@ -95,67 +81,61 @@ h3 {
 
 .ul-principales a:hover {
     border-bottom: white solid 0.1vmax;
+    color: white;
 }
 
-.h3-secundarios {
+*/ .h3-secundarios {
     border-top: #B99F65 solid 0.3vmax;
 }
 
 .ul-secundarios {
-    margin-top: 1%;
-    margin-bottom: 1%;
-    padding-bottom: 1%;
     border-bottom: #B99F65 solid 0.3vmax;
 }
 
 .ul-secundarios li {
     list-style-type: none;
-    display: inline;
 }
 
 .ul-secundarios a {
     text-decoration: none;
     font-size: 125%;
     color: #B99F65;
-    padding: 1em 1em 0em 1em;
 }
 
 .ul-secundarios a:hover {
     border-bottom: white solid 0.1vmax;
+    color: white;
 }
 
 h4 {
-    color: #B99F65;
-    font-size: 150%;
-    transition: 0.5s;
     padding-top: 235px;
     margin-top: -235px;
     margin-left: 45%;
     margin-right: 45%;
+    color: #B99F65;
+    font-size: 150%;
+    transition: 0.5s;
     border-bottom: #B99F65 solid 0.3vmax;
 }
 
-p {
-    margin: 3% 10% 3% 10%;
+h4+p {
     line-height: 1.5em;
     text-align: justify;
     background: #00000080;
     backdrop-filter: blur(4px);
     padding: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 img {
-    width: 25%;
-    height: 25%;
-    padding-bottom: 5%;
-}
-
-#link {
-    margin-top: -10%;
+    width: 20%;
 }
 
 footer {
-    margin-top: 2%;
-    text-align: center;
     font-size: 170%;
+}
+
+#link {
+    margin-top: -15%;
 }

@@ -40,55 +40,33 @@ body {
 }
 
 header {
-    text-align: center;
-    margin-top: 1%;
-    margin-bottom: 1%;
     font-size: 300%;
     color: #B99F65;
 }
 
 h2 {
-    text-align: center;
-    margin-top: 1%;
-    margin-bottom: 1%;
     border-bottom: #B99F65 solid 0.5vh;
-    padding-right: auto;
-    padding-left: auto;
-    padding-bottom: 1%;
     font-size: 200%;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse;
-    line-height: 2em;
-    background: #00000080;
+    line-height: 3em;
     backdrop-filter: blur(4px);
-}
-
-th {
-    border: #B99F65 solid 0.5vh;
-}
-
-td {
-    padding-left: 0.5%;
-    border: #B99F65 solid 0.5vh;
+    background-color: silver;
 }
 
 #Borrar {
-    text-align: center;
-}
-
-#Borrar:hover {
-    color: #B99F65;
-    background-color: black;
-    cursor: pointer;
+    background-image: url("/node_modules/bootstrap-icons/icons/file-x.svg");
+    background-repeat: no-repeat;
+    color: transparent;
+    overflow: hidden;
+    background-size: 3rem 3rem;
 }
 
 footer {
-    margin-top: 2%;
-    text-align: center;
     font-size: 170%;
+    padding-bottom: 12%;
 }
 
 #buscador {
@@ -96,11 +74,20 @@ footer {
 }
 
 #filtro {
-    margin: auto;
-    display: inherit;
     border: 0.5vh solid #B99F65;
     background-color: #00000050;
     color: #B99F65;
     padding: 10px;
     backdrop-filter: blur(4px);
+}
+
+.modificar {
+    background-image: url("/node_modules/bootstrap-icons/icons/file-word.svg");
+    background-repeat: no-repeat;
+    color: transparent;
+    overflow: hidden;
+    background-size: 3rem 3rem;
+    text-indent: -666em;
+    overflow: hidden;
+    padding-left: 28%;
 }

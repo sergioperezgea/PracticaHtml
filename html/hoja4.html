@@ -5,28 +5,51 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Zelda</title>
     <link rel="icon" href="image/favicon.ico" type="image/ico" />
-    <link href="css/navStyle.css" rel="stylesheet" type="text/css" />
     <link href="css/hoja4Style.css" rel="stylesheet" type="text/css" />
     <script src="js/jav.js"></script>
+    <link href="css/navStyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1 id="Titulo">The Legend of Zelda Breath of the Wild</h1>
-    </header>
+    <div class="container-fluid">
+        <header>
+            <div class="row justify-content-center ">
+                <div class="col-5 m-2 text-center">
+                    <h1 id="Titulo">The Legend of Zelda Breath of the Wild</h1>
+                </div>
+            </div>
+        </header>
 
-    <div id="navegacion">
-    </div>
-
-    <main>
-        <h2>Vídeo de presentación</h2>
-        <div class="div-iframe">
-            <iframe src="https://www.youtube.com/embed/ofH5ptn5w-A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="iframe-presentacion"></iframe>
+        <div class="row justify-content-center">
+            <div class="col-6 .col-md-4 .offset-md-4 m-2">
+                <div id="navegacion" class="navbar navbar-brand justify-content-center">
+                </div>
+            </div>
         </div>
-    </main>
-    <footer id="footer">
-        <p>Copyright &copy; Sergio Pérez Gea</p>
-    </footer>
+
+        <main>
+
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="text-white text-center">Video de presentación</h2>
+
+                </div>
+            </div>
+
+
+
+            <div class="div-iframe row justify-content-center">
+                <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <iframe src="https://www.youtube.com/embed/ofH5ptn5w-A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="iframe-presentacion"></iframe>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="text-white m-5 text-center">
+            <p>Copyright &copy; Sergio P&eacute;rez Gea</p>
+        </footer>
+    </div>
 </body>
 
 </html>

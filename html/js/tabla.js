@@ -9,6 +9,7 @@ window.onload = () => {
 
     ];
     //Llamada a la funcion de crear la tabla con los usuarios
+    console.log(usuarios);
     rellenarTabla(usuarios);
 
     //Creación del input filtro
@@ -19,6 +20,57 @@ window.onload = () => {
 
     const div = document.getElementById("buscador");
     div.appendChild(input);
+
+    //creacion del formulario y sus inputs
+    const formulario = document.createElement("form");
+    formulario.setAttribute('id', 'formulario');
+    const form = document.getElementById("form");
+    form.appendChild(formulario);
+
+    const nombre = document.createElement("input");
+    nombre.setAttribute('type', 'text');
+    nombre.setAttribute('id', 'nombre');
+    nombre.setAttribute('placeholder', 'nombre');
+
+    const div19 = document.getElementById("form");
+    div19.appendChild(nombre);
+
+
+    const apellidos = document.createElement("input");
+    apellidos.setAttribute('type', 'text');
+    apellidos.setAttribute('id', 'apellidos');
+    apellidos.setAttribute('placeholder', 'apellidos');
+    const div1 = document.getElementById("form");
+    div1.appendChild(apellidos);
+
+
+    const telefono = document.createElement("input");
+    telefono.setAttribute('type', 'text');
+    telefono.setAttribute('id', 'telefono');
+    telefono.setAttribute('placeholder', 'telefono');
+    const div2 = document.getElementById("form");
+    div2.appendChild(telefono);
+
+    const email = document.createElement("input");
+    email.setAttribute('type', 'text');
+    email.setAttribute('id', 'email');
+    email.setAttribute('placeholder', 'email');
+    const div3 = document.getElementById("form");
+    div3.appendChild(email);
+
+    const sexo = document.createElement("input");
+    sexo.setAttribute('type', 'text');
+    sexo.setAttribute('id', 'sexo');
+    sexo.setAttribute('placeholder', 'sexo');
+    const div4 = document.getElementById("form");
+    div4.appendChild(sexo);
+
+    const comentario = document.createElement("input");
+    comentario.setAttribute('type', 'text');
+    comentario.setAttribute('id', 'comentario');
+    comentario.setAttribute('placeholder', 'comentario');
+    const div5 = document.getElementById("form");
+    div5.appendChild(comentario);
 
     //constante con el que filtraremos los nombres de la tabla
     const filtrar = () => {
@@ -34,8 +86,20 @@ window.onload = () => {
         }
     }
     document.addEventListener('keyup', filtrar);
-    console.log(usuarios);
 
+    rellenarinput(usuarios);
+
+    //cambiar la id de los input de los modificar
+    var length = usuarios.length;
+    var i = 0;
+
+    while (i < length) {
+        const editar = document.getElementById("editar");
+        editar.setAttribute('id', i);
+        i++
+    }
+    //hacer el form invisible
+    document.getElementById("form").style.visibility = "hidden";
 };
 
 //Funcion para crear la tabla con los usuarios
@@ -59,11 +123,12 @@ const crearColumna = (texto) => {
 
 //Constante para crear las filas de la tabla, añadirles id y añadir que el boton x elimine la fila por id,(el id es el email)
 const crearFila = (usuario) => {
-    const id = usuario.email;
     const fila = document.createElement('tr');
+    const id = usuario.telefono;
     fila.setAttribute('id', id);
-    fila.appendChild(crearBoton('X', () => document.getElementById(id).remove()));
-    fila.appendChild(crearBoton2('E', () => document.getElementById(id)));
+    fila.appendChild(crearBoton('Borrar', () => document.getElementById(id).remove()));
+    //fila.appendChild(crearBoton2('Modificar', () => onclick(window.open("index.html"))));
+    fila.appendChild(crearBoton2('Modificar', () => document.getElementById("form").style.visibility = "visible"));
     fila.appendChild(crearColumna(usuario.nombre));
     fila.appendChild(crearColumna(usuario.apellidos));
     fila.appendChild(crearColumna(usuario.telefono));
@@ -86,8 +151,68 @@ const crearBoton = (texto, onClick) => {
 const crearBoton2 = (texto, onClick) => {
     const boton2 = document.createElement('button');
     boton2.id = 'editar';
+    boton2.class = 'hola';
     boton2.title = 'Editar usuario';
+    boton2.setAttribute('class', 'modificar');
     boton2.onclick = onClick;
     boton2.innerText = texto;
     return boton2;
 };
+
+
+
+
+
+
+
+
+
+function rellenarinput(usuarios) {
+    var length = usuarios.length;
+    var i = 0;
+
+
+
+
+
+
+
+    //poner 6 if comparando el id del buton con la posicion del array
+    while (i < length) {
+        //console.log(length);
+        //console.log(i);
+
+
+
+        if (usuarios[i].length = 1) {
+            const nombre = usuarios[i].nombre;
+            const apellidos = usuarios[i].apellidos;
+            const telefono = usuarios[i].telefono;
+            const email = usuarios[i].email;
+            const sexo = usuarios[i].sexo;
+            const comentario = usuarios[i].comentario;
+
+            document.getElementById('nombre').value = nombre;
+            document.getElementById('apellidos').value = apellidos;
+            document.getElementById('telefono').value = telefono;
+            document.getElementById('email').value = email;
+            document.getElementById('sexo').value = sexo;
+            document.getElementById('comentario').value = comentario;
+        }
+
+
+
+
+        i++;
+
+        /*if (i < length) {
+            document.getElementById('nombre').value = nombre;
+            document.getElementById('apellidos').value = apellidos;
+            document.getElementById('telefono').value = telefono;
+            document.getElementById('email').value = email;
+            document.getElementById('sexo').value = sexo;
+            document.getElementById('comentario').value = comentario;
+        }*/
+
+    }
+}

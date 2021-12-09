@@ -10,78 +10,132 @@
     <link href="css/navStyle.css" rel="stylesheet" type="text/css" />
     <link href="css/indexStyle.css" rel="stylesheet" type="text/css" />
     <script src="js/jav.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
 </head>
 
 <body>
-    <header>
-        <h1 id="Titulo">The Legend of Zelda Breath of the Wild</h1>
-    </header>
+    <div class="container-fluid">
+        <header>
+            <div class="row justify-content-center  ">
+                <div class="col-5 m-2 text-center">
+                    <h1 id="Titulo">The Legend of Zelda Breath of the Wild</h1>
+                </div>
+            </div>
+        </header>
 
-    <div id="navegacion">
+        <div class="row justify-content-center">
+            <div class="col-6 .col-md-4 .offset-md-4 m-2">
+                <div id="navegacion" class="navbar navbar-brand justify-content-center">
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="text-white text-center">Inicio</h2>
+
+                </div>
+            </div>
+
+
+
+
+            <form action="ws/crearUsuario.php" method="POST" id=formulario class="text-center was-validated">
+                <div class="row justify-content-center">
+
+                    <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+
+                        <fieldset id="personales">
+
+                            <legend>Datos personales</legend>
+                            <p class="text-white">
+                                <label for="nombre" class="form-label">
+						            Nombre:
+                                <input class="p-2  form-control" id="nombre" type="text" name="nombre" maxlength="50" placeholder="Enter username" required />
+                                </label>
+                                <br>
+                                <br>
+                                <label for="apellidos" class="form-label">
+						            Apellidos:
+						            <input class="p-2 form-control" id="apellidos" type="text" name="apellidos" maxlength="50 " placeholder="Hernandez Gimenez" required />
+					            </label>
+                                <br>
+                                <br>
+                                <label for="paswword" class="form-label">
+						            contrase&ntilde;a:
+						            <input class="p-2 form-control " id="paswword" type="text" name="clave" maxlength="50" required />
+					            </label>
+                                <br>
+                                <br>
+                                <label for="telefono" class="form-label">
+						            Telefono
+					            	<input class="p-2  form-control" id="telefono" type="tel" name="telefono" placeholder="666433423" required />
+					            </label>
+                                <br>
+                                <br>
+                                <label for="email" class="form-label">
+						            Email
+					            	<input class="p-2  form-control" id="email" type="email" name="correo" placeholder="prueba@gmail.com" required />
+					            </label>
+                                <br>
+                                <br>
+                                <label for="fecha_nacimiento" class="form-label">
+						            Nacimiento
+						            <input class="p-2  form-control" id="fecha_nacimiento" type="text" name="fecha_nacimiento" placeholder="1978-08-03" required />
+					            </label>
+                            </p>
+                        </fieldset>
+
+                    </div>
+
+                    <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <fieldset id="otros" class="pb-5">
+
+                            <legend>Otros datos</legend>
+                            <p class="text-white">
+                                Sexo:
+                                <label></label>
+                                <input type="radio" name="sexo" value="hombre" checked class="mt-5" /> Hombre
+
+                                <label></label>
+                                <input type="radio" name="sexo" value="mujer" /> Mujer
+
+                            </p>
+                            <br>
+
+                            <label for="comentario" class="form-label">
+                                <textarea id="comentario" name="comentario" placeholder="comentario"  cols="80" rows="15" class="form-control" required></textarea>
+                            </label>
+                        </fieldset>
+                    </div>
+                    <br>
+
+
+                    <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-4">
+                        <input type="submit" name="enviar" id="enviar" class="btn btn-outline-light btn btn-success">
+                    </div>
+
+                    <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-4">
+                        <input type="reset" name="limpiar" value="Limpiar" id="borrar" class="btn btn-outline-light">
+                    </div>
+
+            </form>
+            </div>
+        </main>
+
+
+        <footer id="footer" class="text-white m-5 text-center">
+            <p>Copyright &copy; Sergio P&eacute;rez Gea</p>
+        </footer>
     </div>
 
-    <main>
-        <h2>Inicio</h2>
-        <form action="ws/crearUsuario.php" method="POST">
-            <fieldset id="personales">
-                <legend>Datos personales</legend>
-                <p>
-                    <label>
-						Nombre:
-						<input type="text" name="nombre" maxlength="50" placeholder="Mario" />
-					</label>
-                    <br>
-                    <br>
-                    <label>
-						Apellidos:
-						<input type="text" name="apellidos" maxlength="50" placeholder="Hernandez Gimenez" />
-					</label>
-                    <br>
-                    <br>
-                    <label>
-						contrase&ntilde;a:
-						<input type="text" name="clave" maxlength="50" />
-					</label>
-                    <br>
-                    <br>
-                    <label>
-						Telefono
-						<input type="tel" name="telefono" placeholder="666433423" />
-					</label>
-                    <br>
-                    <br>
-                    <label>
-						Email
-						<input id="email" type="email" name="correo" placeholder="prueba@gmail.com" />
-					</label>
-                    <label>
-						Nacimiento
-						<input id="fecha_nacimiento" type="text" name="fecha_nacimiento" placeholder="1978-08-03" />
-					</label>
-                </p>
-            </fieldset>
-            <fieldset id="otros">
-                <legend>Otros datos</legend>
-                <p>
-                    Sexo:
-                    <label>
-						<input type="radio" name="sexo" value="hombre" checked /> Hombre
-					</label>
-                    <label>
-						<input type="radio" name="sexo" value="mujer" /> Mujer
-					</label>
-                </p>
-                <br>
-                <textarea name="comentario" placeholder="comentario" rows="10" cols="88"></textarea>
-            </fieldset>
-            <br>
-            <input type="submit" name="enviar" id="enviar">
-            <input type="reset" name="limpiar" value="Limpiar" id="borrar">
-        </form>
-    </main>
-    <footer id="footer">
-        <p>Copyright &copy; Sergio P&eacute;rez Gea</p>
-    </footer>
+
+
 </body>
 
 </html>

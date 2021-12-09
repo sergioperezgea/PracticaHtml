@@ -40,20 +40,12 @@ body {
 }
 
 header {
-    text-align: center;
-    margin-top: 1%;
-    margin-bottom: 1%;
     font-size: 300%;
     color: #B99F65;
 }
 
 h2 {
-    text-align: center;
-    margin-top: 1%;
-    margin-top: 1%;
     border-bottom: #B99F65 solid 0.5vh;
-    padding-right: auto;
-    padding-left: auto;
     padding-bottom: 1%;
     font-size: 200%;
 }
