@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Registro</title>
+    <link rel="icon" href="image/favicon.ico" type="image/ico">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="index">Registro</a></li>
+                <li><a href="hoja2.html" class="hoja2">Usuarios</a></li>
+                <li><a href="hoja3.html" class="hoja3">Historia</a></li>
+                <li><a href="hoja4.html" class="hoja4">Videos</a></li>
+                <li><a href="hoja5.html" class="hoja5">Djs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Registro</h1>
+        <form method="POST" id=formulario>
+            <fieldset id="datos_personales">
+                <legend>Datos personales</legend>
+                <p>
+                    <label for="nombre">
+                    Nombre:
+                    <input id="nombre" type="text" name="nombre" maxlength="50" placeholder="Escriba su nombre" required>
+                </label>
+
+                    <br>
+                    <br>
+
+                    <label for="apellidos">
+                     Apellidos:
+                    <input id="apellidos" type="text" name="apellidos" maxlength="50" placeholder="Escriba sus apellidos" required>
+                </label>
+
+                    <br>
+                    <br>
+
+                    <label for="password">
+                    contraseña:
+                    <input id="password" type="password" name="password" maxlength="50" required>
+                </label>
+
+                    <br>
+                    <br>
+
+                    <label for="telefono">
+                    Teléfono
+                    <input id="telefono" type="tel" name="telefono" placeholder="932123456" required>
+                </label>
+
+                    <br>
+                    <br>
+
+                    <label for="email">
+                    Email
+                    <input id="email" type="email" name="email" placeholder="email@gmail.com" required>
+                </label>
+
+                    <br>
+                    <br>
+
+                    <label for="fecha_nacimiento">
+                    Nacimiento
+                    <input id="fecha_nacimiento" type="text" name="fecha_nacimiento" placeholder="2001-10-26" required>
+                </label>
+
+                </p>
+            </fieldset>
+
+            <fieldset id="datos_interes">
+                <legend>Datos de interes</legend>
+                <p>
+                    Sexo:
+                    <input id="hombre" type="radio" name="sexo" value="hombre" checked>
+                    <label for="hombre">Hombre</label>
+
+                    <input id="mujer" type="radio" name="sexo" value="mujer">
+                    <label for="mujer">Mujer</label>
+
+                    <br>
+                    <br>
+
+                    <label for="ciudad">
+                        Ciudad:
+                        <input id="ciudad" type="text" name="ciudad" maxlength="50" placeholder="Escriba su ciudad" required>
+                    </label>
+
+                    <br>
+                    <br>
+
+                    <label for="postal">
+                        Codigo Postal:
+                        <input id="postal" type="number" name="postal" min="0" max="99999" placeholder="0" required>
+                    </label>
+
+                    <br>
+                    <br>
+
+                    <label for="comentario">
+                        <textarea id="comentario" name="comentario" placeholder="Escriba un comentario"  cols="80" rows="15" required></textarea>
+                    </label>
+                </p>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer id="footer">
+        <p>Copyright &copy; Sergio P&eacute;rez Gea</p>
+    </footer>
+</body>
+
+</html>
