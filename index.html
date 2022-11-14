@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Registro</title>
+    <title>Usuarios</title>
     <link rel="icon" href="image/favicon.ico" type="image/ico">
 </head>
 
@@ -22,7 +22,7 @@
 
     <main>
         <h1>Registro</h1>
-        <form method="POST" id=formulario>
+        <form method="POST" action="ws/crearUsuario.php" id=formulario>
             <fieldset id="datos_personales">
                 <legend>Datos personales</legend>
                 <p>
@@ -62,15 +62,6 @@
                     Email
                     <input id="email" type="email" name="email" placeholder="email@gmail.com" required>
                 </label>
-
-                    <br>
-                    <br>
-
-                    <label for="fecha_nacimiento">
-                    Nacimiento
-                    <input id="fecha_nacimiento" type="text" name="fecha_nacimiento" placeholder="2001-10-26" required>
-                </label>
-
                 </p>
             </fieldset>
 
@@ -83,31 +74,13 @@
 
                     <input id="mujer" type="radio" name="sexo" value="mujer">
                     <label for="mujer">Mujer</label>
-
-                    <br>
-                    <br>
-
-                    <label for="ciudad">
-                        Ciudad:
-                        <input id="ciudad" type="text" name="ciudad" maxlength="50" placeholder="Escriba su ciudad" required>
-                    </label>
-
-                    <br>
-                    <br>
-
-                    <label for="postal">
-                        Codigo Postal:
-                        <input id="postal" type="number" name="postal" min="0" max="99999" placeholder="0" required>
-                    </label>
-
-                    <br>
-                    <br>
-
-                    <label for="comentario">
-                        <textarea id="comentario" name="comentario" placeholder="Escriba un comentario"  cols="80" rows="15" required></textarea>
-                    </label>
                 </p>
             </fieldset>
+
+            <input type="submit" name="enviar" value="enviar" id="enviar">
+
+            <input type="reset" name="borrar" value="borrar" id="borrar">
+
         </form>
     </main>
 
