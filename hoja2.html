@@ -5,41 +5,39 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Usuarios</title>
     <link rel="icon" href="image/favicon.ico" type="image/ico">
+    <script src="js/relleno.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="nav">
         <nav>
-            <ul>
-                <li><a href="index.html" class="index">Registro</a></li>
-                <li><a href="hoja2.html" class="hoja2">Usuarios</a></li>
-                <li><a href="hoja3.html" class="hoja3">Historia</a></li>
-                <li><a href="hoja4.html" class="hoja4">Videos</a></li>
-                <li><a href="hoja5.html" class="hoja5">Djs</a></li>
-            </ul>
+            <a href="index.html" class="index" id="hoja0">Registro</a>
+            <a href="hoja2.html" class="hoja2" id="hoja0">Usuarios</a>
+            <a href="hoja3.html" class="hoja3" id="hoja0">Historia</a>
+            <a href="hoja4.html" class="hoja4" id="hoja0">Videos</a>
+            <a href="hoja5.html" class="hoja5" id="hoja0">Djs</a>
         </nav>
     </header>
 
     <main>
         <h1>Usuarios</h1>
+        <div id="buscador"></div>
         <table id="table">
-            <tr>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Teléfono</th>
-                <th>Email</th>
-                <th>sexo</th>
-            </tr>
+            <thead>
+                <tr id="prueba">
 
-            <tr>
-                <td>Sergio</td>
-                <td>Pérez Gea</td>
-                <td>654943302</td>
-                <td>prueba@gmail.com</td>
-                <td>Hombre</td>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>sexo</th>
+                </tr>
+            </thead>
 
-            </tr>
+            <tbody id="tbody">
+            </tbody>
         </table>
+        <div id='form'></div>
     </main>
 
     <footer id="footer">
