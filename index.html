@@ -5,86 +5,84 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Usuarios</title>
     <link rel="icon" href="image/favicon.ico" type="image/ico">
+    <script src="js/nav.js"></script>
+
 </head>
 
 <body>
-    <header id="nav">
-        <nav>
-            <a href="index.html" class="index" id="hoja0">Registro</a>
-            <a href="hoja2.html" class="hoja2" id="hoja0">Usuarios</a>
-            <a href="hoja3.html" class="hoja3" id="hoja0">Historia</a>
-            <a href="hoja4.html" class="hoja4" id="hoja0">Videos</a>
-            <a href="hoja5.html" class="hoja5" id="hoja0">Djs</a>
-        </nav>
-    </header>
 
-    <main>
-        <h1 id="h1">Registro</h1>
-        <form method="POST" action="ws/crearUsuario.php" id=formulario>
-            <fieldset id="datos_personales">
-                <legend>Datos personales</legend>
-                <p>
-                    <label for="nombre">
+    <body onload="prueba()">
+        <header id="nav">
+
+        </header>
+
+        <main>
+            <h1 id="h1">Registro</h1>
+            <form method="POST" action="ws/crearUsuario.php" id=formulario>
+                <fieldset id="datos_personales">
+                    <legend>Datos personales</legend>
+                    <p>
+                        <label for="nombre">
                     Nombre:
                     <input id="nombre" type="text" name="nombre" maxlength="50" placeholder="Escriba su nombre" required>
                 </label>
 
-                    <br>
-                    <br>
+                        <br>
+                        <br>
 
-                    <label for="apellidos">
+                        <label for="apellidos">
                      Apellidos:
                     <input id="apellidos" type="text" name="apellidos" maxlength="50" placeholder="Escriba sus apellidos" required>
                 </label>
 
-                    <br>
-                    <br>
+                        <br>
+                        <br>
 
-                    <label for="password">
+                        <label for="password">
                     contraseña:
                     <input id="password" type="password" name="password" maxlength="50" required>
                 </label>
 
-                    <br>
-                    <br>
+                        <br>
+                        <br>
 
-                    <label for="telefono">
+                        <label for="telefono">
                     Teléfono
                     <input id="telefono" type="tel" name="telefono" placeholder="932123456" required>
                 </label>
 
-                    <br>
-                    <br>
+                        <br>
+                        <br>
 
-                    <label for="email">
+                        <label for="email">
                     Email
                     <input id="email" type="email" name="email" placeholder="email@gmail.com" required>
                 </label>
-                </p>
-            </fieldset>
+                    </p>
+                </fieldset>
 
-            <fieldset id="datos_interes">
-                <legend>Datos de interes</legend>
-                <p>
-                    Sexo:
-                    <input id="hombre" type="radio" name="sexo" value="hombre" checked>
-                    <label for="hombre">Hombre</label>
+                <fieldset id="datos_interes">
+                    <legend>Datos de interes</legend>
+                    <p>
+                        Sexo:
+                        <input id="hombre" type="radio" name="sexo" value="hombre" checked>
+                        <label for="hombre">Hombre</label>
 
-                    <input id="mujer" type="radio" name="sexo" value="mujer">
-                    <label for="mujer">Mujer</label>
-                </p>
-            </fieldset>
+                        <input id="mujer" type="radio" name="sexo" value="mujer">
+                        <label for="mujer">Mujer</label>
+                    </p>
+                </fieldset>
 
-            <input type="submit" name="enviar" value="enviar" id="enviar">
+                <input type="submit" name="enviar" value="enviar" id="enviar">
 
-            <input type="reset" name="borrar" value="borrar" id="borrar">
+                <input type="reset" name="borrar" value="borrar" id="borrar">
 
-        </form>
-    </main>
+            </form>
+        </main>
 
-    <footer id="footer">
-        <p>Copyright &copy; Sergio P&eacute;rez Gea</p>
-    </footer>
-</body>
+        <footer id="footer">
+            <p>Copyright &copy; Sergio P&eacute;rez Gea</p>
+        </footer>
+    </body>
 
 </html>
