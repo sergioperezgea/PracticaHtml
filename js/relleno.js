@@ -18,11 +18,6 @@ window.onload = () => {
     const div = document.getElementById("buscador");
     div.appendChild(input);
 
-
-
-
-
-
     //creacion del formulario y sus inputs
     const formulario = document.createElement("form");
     formulario.setAttribute('id', 'formulario');
@@ -81,11 +76,6 @@ window.onload = () => {
     const div6 = document.getElementById("form");
     div6.appendChild(indice);
 
-
-
-
-
-
     //constante para hacer que filte el boton
 
     const filtrar = () => {
@@ -141,6 +131,7 @@ function rellenarTabla(usuarios) {
 const crearColumna = (texto) => {
     const columna = document.createElement('td');
     columna.textContent = texto;
+
     return columna;
 };
 
@@ -173,18 +164,17 @@ const crearBorrar = (texto, onClick) => {
     return boton;
 };
 
-
+//Constante para crear en la tabla, el td boton "modificar"
 const crearModificar = (texto, onClick) => {
     const boton2 = document.createElement('button');
     boton2.id = 'editar';
-    boton2.class = 'hola';
     boton2.title = 'Editar usuario';
-    boton2.setAttribute('class', 'modificar');
     boton2.onclick = onClick;
     boton2.innerText = texto;
     return boton2;
 };
 
+//Funcion para rellenar el form con los datos de la tabla
 
 function rellenarInput(usuario, indice) {
 
@@ -203,10 +193,59 @@ function rellenarInput(usuario, indice) {
 
 }
 
+//Funcion para rellenar la tabla con los nuevos valores de modificación del formulario
+
 function modificarInput() {
-    //buscar la fila que tiene el mismo indice y actualizarlo
+    const nombre = document.getElementById('nombre').value;
+    const apellidos = document.getElementById('apellidos').value;
+    const telefono = document.getElementById('telefono').value;
+    const email = document.getElementById('email').value;
+    const sexo = document.getElementById('sexo').value;
 
+    usuario1 = document.getElementById("indice").value;
 
+    if (usuario1 == "0") {
+        document.getElementById("666884346").cells[0].innerHTML = nombre;
+        document.getElementById("666884346").cells[1].innerHTML = apellidos;
+        document.getElementById("666884346").cells[2].innerHTML = telefono;
+        document.getElementById("666884346").cells[3].innerHTML = email;
+        document.getElementById("666884346").cells[4].innerHTML = sexo;
 
+    }
 
+    if (usuario1 == "1") {
+        document.getElementById("666123123").cells[0].innerHTML = nombre;
+        document.getElementById("666123123").cells[1].innerHTML = apellidos;
+        document.getElementById("666123123").cells[2].innerHTML = telefono;
+        document.getElementById("666123123").cells[3].innerHTML = email;
+        document.getElementById("666123123").cells[4].innerHTML = sexo;
+
+    }
+
+    if (usuario1 == "2") {
+        document.getElementById("666999123").cells[0].innerHTML = nombre;
+        document.getElementById("666999123").cells[1].innerHTML = apellidos;
+        document.getElementById("666999123").cells[2].innerHTML = telefono;
+        document.getElementById("666999123").cells[3].innerHTML = email;
+        document.getElementById("666999123").cells[4].innerHTML = sexo;
+
+    }
+
+    if (usuario1 == "3") {
+        document.getElementById("666888123").cells[0].innerHTML = nombre;
+        document.getElementById("666888123").cells[1].innerHTML = apellidos;
+        document.getElementById("666888123").cells[2].innerHTML = telefono;
+        document.getElementById("666888123").cells[3].innerHTML = email;
+        document.getElementById("666888123").cells[4].innerHTML = sexo;
+
+    }
+
+    if (usuario1 == "4") {
+        document.getElementById("666777123").cells[0].innerHTML = nombre;
+        document.getElementById("666777123").cells[1].innerHTML = apellidos;
+        document.getElementById("666777123").cells[2].innerHTML = telefono;
+        document.getElementById("666777123").cells[3].innerHTML = email;
+        document.getElementById("666777123").cells[4].innerHTML = sexo;
+
+    }
 }
