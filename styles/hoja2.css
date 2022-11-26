@@ -1,0 +1,103 @@
+/*Borrar formato*/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+pre,
+code,
+address,
+form,
+fieldset,
+blockquote {
+    padding: 0;
+    /*relleno a 0*/
+    margin: 0;
+    /*margen a 0 */
+    font-size: 100%;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url("\../image/mesa3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+
+/************************ MAIN ************************/
+
+.main {
+    border-bottom: 2vh solid black;
+}
+
+main {
+    margin-top: 2%;
+    margin-bottom: 7%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 2em;
+    background: #00000080;
+    backdrop-filter: blur(1%);
+    border: white solid 0.5vh;
+    margin-bottom: 4%;
+}
+
+th {
+    border: white solid 0.5vh;
+}
+
+td {
+    border: white solid 0.5vh;
+    text-align: center;
+}
+
+tr {
+    border: white solid 0.5vh;
+    text-align: center;
+}
+
+#Borrar {
+    text-align: center;
+}
+
+#filtro {
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-bottom: 3%;
+    text-align: center;
+    display: inherit;
+    border: 0.5vh solid white;
+    background-color: #00000080;
+    color: white;
+    padding: 10px;
+    backdrop-filter: blur(4px);
+}
+
+#form {
+    line-height: 2em;
+}
+
+#form input {
+    background: #00000080;
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 0.5%;
+    margin: 0.3%;
+}

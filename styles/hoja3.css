@@ -1,0 +1,80 @@
+/*Borrar formato*/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+pre,
+code,
+address,
+form,
+fieldset,
+blockquote {
+    padding: 0;
+    /*relleno a 0*/
+    margin: 0;
+    /*margen a 0 */
+    font-size: 100%;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url("\../image/mesa3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+
+/************************ MAIN ************************/
+
+.main {
+    border-bottom: 2vh solid black;
+}
+
+main {
+    margin-top: 2%;
+    margin-bottom: 9%;
+}
+
+section {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 1%;
+    text-align: justify;
+    background: #00000080;
+    backdrop-filter: blur(50px);
+}
+
+.parrafo1 {
+    margin: 1%;
+}
+
+.parrafo2 {
+    margin: 1%;
+}
+
+.parrafo3 {
+    margin: 1%;
+}
+
+.parrafo4 {
+    margin: 1%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 200%;
+}

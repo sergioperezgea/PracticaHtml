@@ -95,7 +95,7 @@ window.onload = () => {
     //Creación del th de Acciones
     const th = document.createElement("th");
     th.textContent = "Acciones";
-    const prueba = document.getElementById("prueba");
+    const prueba = document.getElementById("tabla");
     prueba.insertAdjacentElement("afterbegin", th);
 
 

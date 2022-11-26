@@ -6,18 +6,25 @@
     <title>Usuarios</title>
     <link rel="icon" href="image/favicon.ico" type="image/ico">
     <script src="js/nav.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/footer.css">
 
 </head>
 
 <body>
 
-    <body onload="prueba()">
-        <header id="nav">
-
-        </header>
-
-        <main>
+    <div id="header">
+        <header>
             <h1 id="h1">Registro</h1>
+        </header>
+    </div>
+
+    <div id="nav"></div>
+
+    <div class="main">
+        <main>
             <form method="POST" action="ws/crearUsuario.php" id=formulario>
                 <fieldset id="datos_personales">
                     <legend>Datos personales</legend>
@@ -79,10 +86,14 @@
 
             </form>
         </main>
+    </div>
 
-        <footer id="footer">
+
+    <div id="footer">
+        <footer class="footer">
             <p>Copyright &copy; Sergio P&eacute;rez Gea</p>
         </footer>
-    </body>
+    </div>
+</body>
 
 </html>

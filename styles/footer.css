@@ -1,0 +1,22 @@
+/************************ FOOTER ************************/
+
+#footer {
+    grid-column: 1/4;
+    grid-row: 4/4;
+    background-image: url("\../image/mesa3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 1%;
+}
+
+footer {
+    margin-top: 5%;
+}
+
+footer p {
+    text-align: left;
+    font-size: 200%;
+    font-weight: bold;
+}

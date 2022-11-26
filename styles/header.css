@@ -1,0 +1,18 @@
+/************************ HEADER ************************/
+
+#header {
+    text-align: center;
+    margin-bottom: 1%;
+    border-bottom: 2vh solid black;
+    padding-bottom: 1%;
+}
+
+#h1 {
+    font-size: 400%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#h1:hover {
+    color: blue;
+}

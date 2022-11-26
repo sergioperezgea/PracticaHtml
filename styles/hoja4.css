@@ -1,0 +1,108 @@
+/*Borrar formato*/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+pre,
+code,
+address,
+form,
+fieldset,
+blockquote {
+    padding: 0;
+    /*relleno a 0*/
+    margin: 0;
+    /*margen a 0 */
+    font-size: 100%;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url("\../image/mesa3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+
+/************************ MAIN ************************/
+
+.main {
+    border-bottom: 2vh solid black;
+}
+
+main {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 400%;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 2%;
+}
+
+#videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30%;
+}
+
+#video1 {
+    grid-column: 1/2;
+    margin-left: 4.5%;
+    width: 90%;
+    height: 400%;
+}
+
+#video2 {
+    grid-column: 2/2;
+    margin-left: 4.5%;
+    width: 90%;
+    height: 400%;
+}
+
+#imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#drum1 {
+    grid-column: 1/2;
+    margin-left: 4.5%;
+    width: 90%;
+    height: 100%;
+    transition: 1s;
+    filter: opacity(1);
+}
+
+#drum1:hover {
+    filter: opacity(0);
+}
+
+#mesa1 {
+    grid-column: 2/2;
+    margin-left: 4.5%;
+    width: 90%;
+    height: 100%;
+    transition: 2s;
+}
+
+#mesa1:hover {
+    filter: brightness(200%);
+}
