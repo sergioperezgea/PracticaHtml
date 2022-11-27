@@ -27,6 +27,11 @@ blockquote {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+/*Etiqueta body. Se le da tamaño a la pagina. Se añade una imagen de fondo. 
+ Hacemos que no se repita la imagen, la centramos en el centro, el tamaño
+ que sea cubrir el div, y fijamos la imagen.*/
+
 body {
     height: 100vh;
     background-image: url("\../image/mesa3.jpg");
@@ -40,14 +45,26 @@ body {
 
 /************************ MAIN ************************/
 
+
+/*class del main. Se pone un borde abajo negro para separar el main del footer.  */
+
 .main {
     border-bottom: 2vh solid black;
 }
+
+
+/*Etiqueta main. Se añade margen arriba para separar el main del nav, y margen abajo para bajar el
+footer*/
 
 main {
     margin-top: 2%;
     margin-bottom: 5%;
 }
+
+
+/*Etiqueta h2.(Afecta a todos los h2 de la página). Se alinea en el centro.
+Aumenta el tamaño de la letra un 400%. Se hace negrita, se le añade el subrayado
+y se le da un margen de abajo de un 2% para separarlo de los videos/imagenes.*/
 
 h2 {
     text-align: center;
@@ -57,11 +74,20 @@ h2 {
     margin-bottom: 2%;
 }
 
+
+/*Div de videos. Se le crea un grid de 2 columnas y se le da un margen 
+de abajo de 30% para bajar el div de las imagenes*/
+
 #videos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 30%;
 }
+
+
+/*Id del video1. Se posiciona con el grid en la columna 1(video de la izquierda).
+Se le da un margen de 4.5% para separarlo del otro video.
+Se aumenta el ancho un 90% y la altura un 400% para dejarlo a nuestro gusto.*/
 
 #video1 {
     grid-column: 1/2;
@@ -70,6 +96,11 @@ h2 {
     height: 400%;
 }
 
+
+/*Id del video2. Se posiciona con el grid en la columna 2(video de la derecha).
+Se le da un margen de 4.5% para separarlo del otro video.
+Se aumenta el ancho un 90% y la altura un 400% para dejarlo a nuestro gusto.*/
+
 #video2 {
     grid-column: 2/2;
     margin-left: 4.5%;
@@ -77,23 +108,42 @@ h2 {
     height: 400%;
 }
 
+
+/*Div de imagenes. Se le crea un grid de 2 columnas*/
+
 #imagenes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-#drum1 {
+
+/*Id de la 1º imagen. Se posiciona con el grid en la columna1(imagen de la izquierda).
+ se le da un margen de 4.5% para separarlo de la otra imagen.Se aumenta el ancho un
+ 90% y la altura un 100% para dejarlo a nuestro gusto y se le añade un filtro
+ para ponerle el efecto de desaparecer.*/
+
+*/ #drum1 {
     grid-column: 1/2;
     margin-left: 4.5%;
     width: 90%;
     height: 100%;
-    transition: 1s;
     filter: opacity(1);
 }
 
+
+/*Hover del id de la 1º imagen. Se pone una trasición para que desaparezca en 5 
+ segundos la imagen. y se pone el filtro 0 para que desaparezca.*/
+
 #drum1:hover {
+    transition: 5s;
     filter: opacity(0);
 }
+
+
+/*Id de la 2º imagen. Se posiciona con el grid en la columna2(imagen de la derecha).
+ se le da un margen de 4.5% para separarlo de la otra imagen.Se aumenta el ancho un
+ 90% y la altura un 100% para dejarlo a nuestro gusto. se le añade una transicion
+ para que dure 2 segundos..*/
 
 #mesa1 {
     grid-column: 2/2;
@@ -103,6 +153,10 @@ h2 {
     transition: 2s;
 }
 
+
+/*Hover del id de la 2º imagen. Se le añade un filtro para que la imagen brille
+ al pasar el raton por encima*/
+
 #mesa1:hover {
-    filter: brightness(200%);
+    filter: brightness(400%);
 }

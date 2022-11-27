@@ -40,14 +40,28 @@ body {
 
 /************************ MAIN ************************/
 
+
+/*Etiqueta del main. Se pone un borde abajo negro para separar el main del footer.  */
+
 .main {
     border-bottom: 2vh solid black;
 }
+
+
+/*Se añade margen arriba para separar el main del nav, y margen abajo para bajar el
+footer*/
 
 main {
     margin-top: 2%;
     margin-bottom: 9%;
 }
+
+
+/*Etiqueta section. Se le da margen izquierdo y derecho 15% para hacer mas pequeña
+el area. Un padding de 1% para separar el texto del section. Se alinea justificado.
+Se pone un fondo de color negro. Un backdrop-filter: blur(4px) 
+para hacer el efecto de borroso.
+*/
 
 section {
     margin-left: 15%;
@@ -55,24 +69,43 @@ section {
     padding: 1%;
     text-align: justify;
     background: #00000080;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(4px);
 }
+
+
+/*Parrafo1. Se añade margen de 1% a todo el parrafo para separarlo de todos los demas
+ parrafos.*/
 
 .parrafo1 {
     margin: 1%;
 }
 
+
+/*Parrafo2. Se añade margen de 1% a todo el parrafo para separarlo de todos los demas
+ parrafos.*/
+
 .parrafo2 {
     margin: 1%;
 }
+
+
+/*Parrafo3. Se añade margen de 1% a todo el parrafo para separarlo de todos los demas
+ parrafos.*/
 
 .parrafo3 {
     margin: 1%;
 }
 
+
+/*Parrafo4. Se añade margen de 1% a todo el parrafo para separarlo de todos los demas
+ parrafos.*/
+
 .parrafo4 {
     margin: 1%;
 }
+
+
+/*Etiqueta h2. Se alinea en el centro y se aumenta el tamaño.*/
 
 h2 {
     text-align: center;

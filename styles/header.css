@@ -1,5 +1,10 @@
 /************************ HEADER ************************/
 
+
+/*Div del header. Se alinea el texto en el centro, se le da margen de abajo.
+Se añade un border negro de abajo para separar el header del nav. y un 
+padding abajo para separar el h1 del borde negro.*/
+
 #header {
     text-align: center;
     margin-bottom: 1%;
@@ -7,12 +12,19 @@
     padding-bottom: 1%;
 }
 
+
+/*Id del h1. Se aumenta el tamaño un 400% al texto. Se pone en negrita y se le añade
+un subrayado.*/
+
 #h1 {
     font-size: 400%;
     font-weight: bold;
     text-decoration: underline;
 }
 
+
+/*Se le añade el color negro al pasar por encima el raton.*/
+
 #h1:hover {
-    color: blue;
+    color: black;
 }

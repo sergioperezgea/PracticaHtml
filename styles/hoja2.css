@@ -27,6 +27,11 @@ blockquote {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+/*Etiqueta body. Se le da tamaño a la pagina. Se añade una imagen de fondo. 
+ Hacemos que no se repita la imagen, la centramos en el centro, el tamaño
+ que sea cubrir el div, y fijamos la imagen.*/
+
 body {
     height: 100vh;
     background-image: url("\../image/mesa3.jpg");
@@ -40,59 +45,93 @@ body {
 
 /************************ MAIN ************************/
 
+
+/*Class del main. Se añade un borde abajo negro para separar el main del footer.  */
+
 .main {
     border-bottom: 2vh solid black;
 }
 
+
+/*Etiqueta del main. Se añade margen arriba para separar el main del nav, y margen abajo para bajar el
+footer*/
+
 main {
     margin-top: 2%;
-    margin-bottom: 7%;
+    margin-bottom: 4%;
 }
+
+
+/*Etiqueta tabla. Se aumenta el tamaño de la tabla para que ocupe todo el ancho.
+Se pone un borde collapse para que sea todo una unica linea. Se aumenta esa linea de
+tamaño a 2 em. El fondo lo ponemos del color negro y hacemos un backdrop-filter para
+que el fondo se vea como borroso y se diferencie de la imagen de fondo. Se añade
+un borde a toda la tabla de color blanco y se pone un margen de 4% para bajar el
+formulario */
 
 table {
     width: 100%;
     border-collapse: collapse;
     line-height: 2em;
     background: #00000080;
-    backdrop-filter: blur(1%);
+    backdrop-filter: blur(10px);
     border: white solid 0.5vh;
     margin-bottom: 4%;
 }
 
+
+/*etiqueta th. Se le da borde blanco a todos los th*/
+
 th {
     border: white solid 0.5vh;
 }
+
+
+/*etiqueta td. Se le da borde blanco a todos los td y se alinea el texto al centro.*/
 
 td {
     border: white solid 0.5vh;
     text-align: center;
 }
 
+
+/*etiqueta tr. Se le da borde blanco a todos los tr y se alinea el texto al centro. */
+
 tr {
     border: white solid 0.5vh;
     text-align: center;
 }
 
+
+/*Input X. Se alinea en el centro.*/
+
 #Borrar {
     text-align: center;
 }
+
+
+/*Input filtro. Se le da margen izquierda y derecha para centrarlo en la página.
+se le añade margen abajo para separlo de la tabla. Se alinea el texto en el centro.
+Se pone bordes de color blanco al input. Se pone un fondo de color negro. el texto
+de color blanco, un padding para aumentar el tamaño del input un 
+backdrop-filter: blur(4px) para hacer el efecto de borroso  */
 
 #filtro {
     margin-left: 45%;
     margin-right: 45%;
     margin-bottom: 3%;
     text-align: center;
-    display: inherit;
     border: 0.5vh solid white;
     background-color: #00000080;
     color: white;
-    padding: 10px;
+    padding: 1%;
     backdrop-filter: blur(4px);
 }
 
-#form {
-    line-height: 2em;
-}
+
+/*Input del form. Se pone un fondo de color negro. un  backdrop-filter: blur(4px) 
+para hacer el efecto de borroso. El texto de color blanco y un margen de 0.3 para
+separar los input entre si. */
 
 #form input {
     background: #00000080;

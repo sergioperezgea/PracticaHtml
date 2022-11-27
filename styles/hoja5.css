@@ -27,6 +27,11 @@ blockquote {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+/*Etiqueta body. Se le da tamaño a la página. Se añade una imagen de fondo. 
+ Hacemos que no se repita la imagen, la centramos en el centro, el tamaño
+ que sea cubrir el div, y fijamos la imagen.*/
+
 body {
     height: 100vh;
     background-image: url("\../image/mesa3.jpg");
@@ -40,44 +45,63 @@ body {
 
 /************************ MAIN ************************/
 
-.main {
-    border-bottom: 2vh solid black;
-}
+
+/*Class del main. Se le da una margen arriba y abajo.
+  Se añade un borde abajo negro para separar el main del footer.*/
 
 main {
     margin-top: 2%;
-    margin-bottom: 9%;
+    margin-bottom: 1%;
+    border-bottom: 2vh solid black;
 }
+
+
+/*Id del section.  position: sticky, y top 0 hacemos que el menu no se borre aunque 
+estemos haciendo scroll. Alineamos el texto en el centro y le damos un padding arriba
+de 1% para separar el menu del nav. Por ultimo un z-index: 1 para que siempre
+este por encima de la página. */
 
 #menu-dj {
     position: sticky;
     top: 0;
-    background-image: url("\../image/mesa3.jpg");
-    background-position: center;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    z-index: 1;
     text-align: center;
     padding-top: 1%;
+    z-index: 1;
 }
+
+
+/*Etiqueta a del ul.(Opciones del menu). Añadimos un border de abajo para hacer
+un subyarado a cada opcion del menu y le damos un padding del 0.1 para bajar el 
+subrayado.*/
 
 ul a {
     border-bottom: white solid 0.3vmax;
     padding-bottom: 0.1%;
 }
 
+
+/*Etiquieta li del ul. Usamos display: inline; para hacer que las opciones esten
+en fila. list-style-type: none; para quitar las decoraciones de la lista.
+Se aumenta el tamaño de la letra. se le da un padding de 1% para hacer un margen.
+Se cambia el color del texto a blanco. */
+
 ul li {
     display: inline;
     list-style-type: none;
     font-size: 150%;
-    padding: 1em 1em 0em 1em;
+    padding: 1%;
     color: white;
 }
+
+
+/*Etiqueta h4. Se cambia el color de texto a blanco, se aumenta el tamaño un 150%.
+Se le da un padding-arriba para bajar todo lo que viene a continuación. Se le da 
+un margen izquierda y derecha para hacer pequeña la caja del h4. y un borde bottom
+para hacer un subrayado*/
 
 h4 {
     color: white;
     font-size: 150%;
-    transition: 0.5s;
     padding-top: 4%;
     margin-top: -1%;
     margin-left: 45%;
@@ -85,8 +109,15 @@ h4 {
     border-bottom: white solid 0.3vmax;
 }
 
+
+/*Etiquieta Parrafo. Se le da un margen para crear un cuadro que contendra el texto
+y las imagenes. Se aumenta el espacio entre lineas 1.5em. Se alinea el texto
+a la izquierda. Se añade un fondo de color negro. un  backdrop-filter: blur(4px) 
+para hacer el efecto de borroso. Por ultimo un padding de 1% a todo para hacer
+un margen por toda el area.*/
+
 p {
-    margin: 3% 10% 3% 10%;
+    margin: 3% 5% 3% 5%;
     line-height: 1.5em;
     text-align: left;
     background: #00000080;
@@ -94,9 +125,13 @@ p {
     padding: 1%;
 }
 
+
+/*Etiquetas img. Aumentamos el ancho un 100% y la altura un 35%. Se le añade padding
+arriba y abajo. */
+
 img {
     width: 100%;
     height: 35%;
-    padding-bottom: 1%;
     padding-top: 3%;
+    padding-bottom: 1%;
 }

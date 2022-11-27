@@ -27,6 +27,11 @@ blockquote {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+/*Etiqueta body. Se le da tamaño a la pagina. Se añade una imagen de fondo. 
+ Hacemos que no se repita la imagen, la centramos en el centro, el tamaño
+ que sea cubrir el div, y fijamos la imagen.*/
+
 body {
     height: 100vh;
     background-image: url("\../image/mesa3.jpg");
@@ -40,45 +45,79 @@ body {
 
 /************************ MAIN ************************/
 
+
+/*Class del main. Se añade un borde abajo negro para separar el main del footer.  */
+
 .main {
     border-bottom: 2vh solid black;
 }
+
+
+/*Etiqueta del main. Se añade margen arriba para separar el main del nav, y margen abajo para bajar el
+footer*/
 
 main {
     margin-top: 2%;
     margin-bottom: 1%;
 }
 
+
+/*Etiqueta formulario. Se crea un grid de 2 columnas y se alinea el texto al centro. */
+
 form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
     text-align: center;
 }
 
+
+/*Id del 1º fieldset. Se posiciona en la primera columna del grid(izquierda)*/
+
 #datos_personales {
     grid-column: 1/2;
-    grid-row: 1/2;
 }
 
+
+/*Id del 2º fieldset. Se posiciona en la segunda columna del grid(derecha)*/
+
 #datos_interes {
-    grid-column: 2/3;
-    grid-row: 1/2;
+    grid-column: 2/2;
 }
+
+
+/*Se le da un margen arriba para bajar el input abajo.*/
+
+#datos_interes input {
+    margin-top: 17.5%;
+}
+
+
+/*input del 1º fieldset. Se le da un margen derecha e izquierda para centrar los
+ input en el medio*/
 
 #datos_personales input {
     margin-right: 40%;
     margin-left: 40%;
 }
 
+
+/*Etiquetas input. Se le añade un borde blanco. Se pone un fondo de color negro. 
+un  backdrop-filter: blur(4px) para hacer el efecto de borroso. Se cambia el texto
+a color blanco, se añade un padding de 1% para hacer los input mas grande y un margen
+para separar los inputs entre si. */
+
 input {
     border: 0.5vh solid white;
     background-color: #00000050;
+    backdrop-filter: blur(4px);
     color: WHITE;
     padding: 1%;
-    backdrop-filter: blur(1%);
     margin: 0.4%;
 }
+
+
+/*Etiquetas legend. Se le añade un margen abajo para bajar los input. Un borde blanco
+un fondo negro y se cambia el color del texto a blanco. */
 
 legend {
     margin-bottom: 1%;
@@ -87,26 +126,32 @@ legend {
     color: white;
 }
 
+
+/*Etiquetas fieldset. Se pone un fondo de color negro.  un  backdrop-filter: blur(4px)
+ para hacer el efecto de borroso. Se le añade un margen abajo para bajar el footer */
+
 fieldset {
-    background-color: #00000050;
-    backdrop-filter: blur(1%);
+    background-color: #00000080;
+    backdrop-filter: blur(4px);
     margin-bottom: 1%;
 }
 
+
+/*Input enviar. Se posiciona en la primera columna del grid(izquierda). Se le da un
+margen izquierdo y derecho de 40% para centrar el input en el centro.*/
+
 #enviar {
     grid-column: 1/1;
-    grid-row: 2/2;
     margin-left: 40%;
     margin-right: 40%;
 }
+
+
+/*Input borrar. Se posiciona en la segunda columna del grid(derecha). Se le da un
+margen izquierdo y derecho de 40% para centrar el input en el centro.*/
 
 #borrar {
     grid-column: 2/2;
-    grid-row: 2/2;
-    margin-right: 40%;
     margin-left: 40%;
-}
-
-#datos_interes input {
-    margin-top: 17.5%;
+    margin-right: 40%;
 }
